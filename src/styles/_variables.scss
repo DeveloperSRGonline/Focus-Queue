@@ -1,0 +1,36 @@
+// src/styles/_variables.scss
+
+// --- 1. Background Colors ---
+$bg-app: #050505;          // Main screen background (Pitch black jaisa)
+$bg-card: #121212;         // Task cards in queue
+$bg-modal: #1e293b;        // Screenshot 1: Create Task Modal (Bluish dark)
+$bg-input: #0f172a;        // Input fields background inside modal
+$bg-hover: #27272a;        // Hover effect for cards
+
+// --- 2. Text Colors ---
+$text-primary: #ffffff;    // Headings, Titles
+$text-secondary: #94a3b8;  // Descriptions, Subtitles (Greyish)
+$text-muted: #64748b;      // Timestamps, Placeholders
+
+// --- 3. Brand & Action Colors ---
+$color-brand: #22c55e;     // The "Green" for focus/start/done
+$color-brand-glow: rgba(34, 197, 94, 0.2); // Green glow effect
+$color-primary-btn: #3b82f6; // Screenshot 1: "Add Task" blue button
+$color-danger: #ef4444;    // Delete/Stop buttons
+
+// --- 4. Tag Colors (Screenshot 2 ke hisaab se) ---
+$tag-finance: #3b82f6;     // Blue (Draft Q3 Report)
+$tag-webdev: #a855f7;      // Purple (Landing Page)
+$tag-internal: #f97316;    // Orange (Marketing Team)
+$tag-maintenance: #ef4444; // Red (Fix CSS Bug)
+$tag-appcore: #6366f1;     // Indigo (Review PR)
+
+// --- 5. Borders & Spacing ---
+$border-light: #334155;    // Subtle borders
+$border-focus: #3b82f6;    // Input focus border color
+$radius-sm: 8px;           // Buttons
+$radius-md: 12px;          // Cards
+$radius-lg: 16px;          // Modals
+
+// --- 6. Typography (Agar font change karna ho toh yahan) ---
+$font-stack: 'Inter', system-ui, -apple-system, sans-serif;

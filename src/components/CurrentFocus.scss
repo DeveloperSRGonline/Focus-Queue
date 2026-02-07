@@ -1,0 +1,182 @@
+@use "../styles/variables" as *;
+
+.focus-section {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  // --- Header (Green Dot & Text) ---
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $color-brand; // Green color
+
+    .focus-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .pulse-dot {
+        width: 8px;
+        height: 8px;
+        background-color: $color-brand;
+        border-radius: 50%;
+        box-shadow: 0 0 8px $color-brand; // Glow effect
+        animation: pulse 2s infinite;
+      }
+    }
+
+    .tracking-info {
+      color: $text-muted;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  }
+
+  .focus-card {
+    border: 1px solid $border-light;
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("https://t4.ftcdn.net/jpg/17/14/60/47/360_F_1714604707_0UDWavCJqwDfzm0Ye58IghScy8wM4igN.jpg");
+    background-size: cover;
+    background-position: center;
+
+    &:hover {
+      border-color: rgba($color-brand, 0.3);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    // 1. Top Row
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+
+      .tag {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        background: rgba(0,0,0,0.5);
+        border: 1px solid rgba($color-brand,0.4);
+        color: #6dba8a;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        box-shadow: 0 0 10px rgba($color-brand, 0.1);
+      }
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 12px;
+
+      .btn-pause {
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.7);
+          border-color: rgba(255,255,255,0.5);
+        }
+      }
+
+      .btn-finish {
+        background: rgba($color-brand, 0.2);
+        border-color: $color-brand;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 600;
+
+        &:hover {
+          background: $color-brand;
+          color: black;
+        }
+      }
+    }
+
+    // 2.Content
+    .card-content {
+      margin-bottom: 2rem;
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+        background: linear-gradient(to right, #fff, #22c55e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.1rem;
+        line-height: 1.6;
+        font-weight: 100;
+      }
+    }
+
+    // 3.Footer
+    .card-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 1rem;
+
+      .mindset-trigger {
+        background: none;
+        color: $text-muted;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        letter-spacing: 1px;
+        font-weight: 600;
+
+        &:hover {
+          color: $text-primary;
+        }
+      }
+    }
+  }
+
+  // Keyframes for the dot pulse
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

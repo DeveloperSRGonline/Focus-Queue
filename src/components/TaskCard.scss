@@ -1,0 +1,39 @@
+@use '../styles/variables' as *;
+
+.task-card {
+  background-color: $bg-card;
+  border: 1px solid $border-light;
+  border-radius: $radius-md;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+
+  // Nesting ka power!
+  &:hover {
+    background-color: $bg-hover;
+    transform: translateY(-2px);
+  }
+
+  .task-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: $text-primary;
+  }
+
+  .btn-start {
+    background-color: $color-brand;
+    color: black;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: $radius-sm;
+    font-weight: bold;
+    cursor: pointer;
+    
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

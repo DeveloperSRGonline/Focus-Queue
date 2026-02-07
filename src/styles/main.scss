@@ -1,0 +1,47 @@
+// main.scss
+@use 'variables' as *;
+// Basic Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; // Yeh bohot zaroori hai layout ke liye
+}
+
+body {
+  background-color: $bg-app;
+  color: $text-primary;
+  font-family: $font-stack;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+// Button Reset (Default HTML buttons ugly hote hain)
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Input Reset
+input, textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+// Scrollbar styling (Optional - to make it look cool like the design)
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: $bg-app;
+}
+::-webkit-scrollbar-thumb {
+  background: $bg-card;
+  border-radius: 4px;
+}
